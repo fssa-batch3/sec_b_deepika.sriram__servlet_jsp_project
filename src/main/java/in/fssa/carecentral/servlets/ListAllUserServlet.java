@@ -13,6 +13,10 @@ import javax.servlet.http.HttpServletResponse;
 import in.fssa.carecentral.model.User;
 import in.fssa.carecentral.service.UserService;
 
+
+
+//import in.fssa.carecentral.service.UserService;
+
 /**
  * Servlet implementation class ListAllUserServlet
  */
@@ -24,13 +28,13 @@ public class ListAllUserServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
-		
+
 		UserService userService = new UserService();
 		Set<User> userList = userService.listAllUser();
 		request.setAttribute("Users" , userList);
-		RequestDispatcher rd = request.getRequestDispatcher("list-user.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/list-user.jsp");
 		rd.forward(request, response);
+		
 	}
 
 }

@@ -15,7 +15,7 @@ import in.fssa.carecentral.service.UserService;
 /**
  * Servlet implementation class CreateUserServlet
  */
-@WebServlet("/users/create")
+@WebServlet("/homepage/create")
 public class CreateUserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -38,10 +38,11 @@ public class CreateUserServlet extends HttpServlet {
 		
 		try {
 			userService.createUser(user);
-			response.sendRedirect("./../users");
+			response.sendRedirect(request.getContextPath()+"/users");
 		}catch(ValidationException e) {
 			e.printStackTrace();
 		}
+		
 	}
 
 }

@@ -1,0 +1,10 @@
+@charset "ISO-8859-1";
+form{
+	width : 40%;
+	height:60%;
+	box-shadow : 2px 2px 2px grey;
+}
+
+input{
+	padding : 5px;
+}

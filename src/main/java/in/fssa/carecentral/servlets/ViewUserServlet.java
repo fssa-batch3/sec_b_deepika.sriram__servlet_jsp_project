@@ -24,21 +24,22 @@ public class ViewUserServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
-		UserService userService = new UserService();
-		int id = Integer.parseInt(request.getParameter("id"));
+		String id =  request.getParameter("id");
+		if(id==null || id.isEmpty()) {
+			throw new RuntimeException("id cannot be empty");
+		}
+		
+		int userId = Integer.parseInt(id);
 		try {
-			User user = userService.getUserById(id);
-			if(user!=null) {
-				request.setAttribute("User", user);
-				RequestDispatcher rd = request.getRequestDispatcher("/view-user.jsp");
-				rd.forward(request, response);
-			}else {
-				throw new RuntimeException("No user found");
-			}
-		} catch (ValidationException e) {
+			UserService  userService = new UserService();
+			User user = userService.getUserById(userId);
+			request.setAttribute("User", user);
+			RequestDispatcher rd = request.getRequestDispatcher("/view-user.jsp");
+			rd.forward(request, response);
+		}catch(ValidationException e) {
 			e.printStackTrace();
 		}
+		
 	}
 
 }

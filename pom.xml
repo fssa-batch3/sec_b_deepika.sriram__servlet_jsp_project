@@ -15,8 +15,8 @@
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>in.fwsa</groupId>
-			<artifactId>carecentral</artifactId>
+			<groupId>in.fssa</groupId>
+			<artifactId>javacarecentralproject</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 
