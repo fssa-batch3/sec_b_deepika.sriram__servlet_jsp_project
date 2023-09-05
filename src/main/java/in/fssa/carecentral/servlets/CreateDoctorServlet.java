@@ -39,7 +39,11 @@ public class CreateDoctorServlet extends HttpServlet {
 		
 		try {
 			doctorService.createDoctor(doctor);
+			String alert = "<script>alert('Doctor created successfully');</script>";
+			response.getWriter().println(alert);
 		} catch (ValidationException e) {
+			String alert = "<script>alert('" + e.getMessage() +"');</script>";
+			response.getWriter().println(alert);
 			e.printStackTrace();
 		}
 		finally {

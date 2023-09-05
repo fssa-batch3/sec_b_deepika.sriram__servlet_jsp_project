@@ -15,7 +15,7 @@ h2{
 }
 section{
 	width:40%;
-	border:1px solid black;
+	box-shadow: 0px 0px 5px rgb(203, 202, 202);
 	position : absolute;
 	left:30%;
 	top:10%;

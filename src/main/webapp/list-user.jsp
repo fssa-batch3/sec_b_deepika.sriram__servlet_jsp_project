@@ -46,7 +46,7 @@ td {
 }
 
 </style>
-<title>Registration</title>
+<title>list of users</title>
 </head>
 <body>
 <div>

@@ -1,0 +1,36 @@
+@charset "UTF-8";
+section{
+	display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(21rem,1fr));
+    gap:20px;
+    align-items: center;
+}
+.card{
+    border:1.5px solid transparent;
+    position: relative;
+    width:200px;
+    height:fit-content;
+    padding-top:2%;
+    padding-left:10%;
+    padding-right:8%;
+    box-shadow: 0px 0px 10px rgb(203, 202, 202);
+    margin:10% 5%;
+    background-color: white;
+}
+.card img{
+    width:200px;
+}
+.card h3,p{
+    color:#1b3c74;
+}
+.card button{
+    position: relative;
+    width:275px;
+    padding:15px 5%;
+    margin-left:-20%;
+    color:white;
+    font-weight: bold;
+    background-image: linear-gradient(white,#37b1d3,#00a1cf);
+    border: none;
+    cursor: pointer;
+}

@@ -47,8 +47,12 @@ public class UpdateDoctorServlet extends HttpServlet {
 		
 		try {
 			doctorService.updateDoctor(doctorId, doctor);
+			String alert = "<script>alert('Doctor updated successfully');</script>";
+			response.getWriter().println(alert);
 			response.sendRedirect("./../doctors");
 		} catch (ValidationException e) {
+			String alert = "<script>alert('" + e.getMessage() +"');</script>";
+			response.getWriter().println(alert);
 			e.printStackTrace();
 		}
 	}

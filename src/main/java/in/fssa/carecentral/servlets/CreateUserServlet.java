@@ -1,6 +1,8 @@
 package in.fssa.carecentral.servlets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,8 +40,12 @@ public class CreateUserServlet extends HttpServlet {
 		
 		try {
 			userService.createUser(user);
-			response.sendRedirect(request.getContextPath()+"/users");
+			String alert = "<script>alert('User registered successfully');</script>";
+			response.sendRedirect(request.getContextPath()+"/homepage/login");
 		}catch(ValidationException e) {
+			PrintWriter out = response.getWriter();
+			String jsCode = "<script>alert('" + e.getMessage() + "');</script>";
+			out.println(jsCode);
 			e.printStackTrace();
 		}
 		

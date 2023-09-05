@@ -41,8 +41,9 @@ public class UpdateUserServlet extends HttpServlet {
 			
 			int id = Integer.parseInt(userId);
 			userService.updateUser(id, user);
-			response.sendRedirect("./../users");
+			response.sendRedirect(request.getContextPath()+"/homepage");
 		}catch(ValidationException e) {
+			response.getWriter().println(e.getMessage());
 			e.printStackTrace();
 		}
 	}

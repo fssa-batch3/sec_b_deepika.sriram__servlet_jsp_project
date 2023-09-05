@@ -12,26 +12,59 @@
 body {
 	font-family: "Arial";
 }
-
-tr, th, td {
-	font-family: "Arial";
-	border: 1px solid black;
-	padding: 10px;
+div button{
+	margin-top:5px;
+	color:white;
+	background-color:#08ad37;
+	border:none;
+	border-radius:2px;
+	padding:5px;
 }
+div button:hover{
+	color:#08ad37;
+	background-color:white;
+	border:0.5px solid #08ad37;
+	transition :0.3s;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 10px;
+  border: 2px solid #ddd;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  border-left:0.5px solid #ddd;
+  border-right:0.5px solid #ddd;
+}
+
 </style>
-<title>Registration</title>
+<title>list of users</title>
 </head>
 <body>
-	<a href = "<%=request.getContextPath()%>/homepage">Back to home page</a>
+<div>
+	<a href = "<%=request.getContextPath()%>/homepage">
+		<button>Back to home page</button>
+	</a>
+</div>
+	<br>
 	<table>
 		<tr>
+			<th>User id</th>
 			<th>First Name</th>
 			<th>Last Name</th>
 			<th>Age</th>
 			<th>Gender</th>
 			<th>Mobile number</th>
 			<th>Email address</th>
-			<th>View details</th>
+			<th>View</th>
 			<th>Update</th>
 			<th>Delete</th>
 		</tr>
@@ -43,16 +76,28 @@ tr, th, td {
 		%>
 
 		<tr>
+			<td><%=user.getId() %></td>
 			<td><%=user.getFirstName()%></td>
 			<td><%=user.getLastName()%></td>
 			<td><%=user.getAge()%></td>
 			<td><%=user.getGender()%></td>
 			<td><%=user.getMobileNumber()%></td>
 			<td><%=user.getEmailId()%></td>
-			<td><a href="users/user?id=<%=user.getId()%>">View details</a></td>
-			<td><a href="users/edit?id=<%=user.getId()%>">Update
-					details</a></td>
-			<td><a href="users/delete?id=<%=user.getId()%>">Delete</a></td>
+			<td>
+				<a href="users/user?id=<%=user.getId()%>">
+					<button>view</button>
+				</a>
+			</td>
+			<td>
+				<a href="users/edit?id=<%=user.getId()%>">
+					<button>update</button>
+				</a>
+			</td>
+			<td>
+				<a href="users/delete?id=<%=user.getId()%>">
+					<button>delete</button>
+				</a>
+			</td>
 		</tr>
 		<%
 		}

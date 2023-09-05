@@ -37,6 +37,8 @@ public class ViewDoctorServlet extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("/view_doctor.jsp");
 			rd.forward(request, response);
 		} catch (ValidationException e) {
+			String alert = "<script>alert('" + e.getMessage() +"');</script>";
+			response.getWriter().println(alert);
 			e.printStackTrace();
 		}
 	}

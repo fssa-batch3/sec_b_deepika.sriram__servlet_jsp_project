@@ -36,6 +36,8 @@ public class EditUserServlet extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("/update-user.jsp");
 			rd.forward(request, response);
 		}catch(ValidationException e) {
+			String alert = "<script>alert('" + e.getMessage() +"');</script>";
+			response.getWriter().println(alert);
 			e.printStackTrace();
 		}
 		
