@@ -30,7 +30,7 @@
 			<a href="javascript:void(0)" class="dropbtn"><img alt="" src="https://iili.io/J9zTqvI.png" id="avatar"></a>
 			<div class="dropdown-content">
 				<a href="<%=request.getContextPath() %>/users/user?id=<%=id%>">View profile</a>
-				<a href="<%=request.getContextPath()%>">My appointments</a>
+				<a href="<%=request.getContextPath()%>/myappointments">My appointments</a>
 				<a href="<%=request.getContextPath()%>/homepage/logout">Logout</a>
 			</div>
 		</div>

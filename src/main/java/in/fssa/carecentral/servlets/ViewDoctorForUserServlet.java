@@ -1,4 +1,4 @@
-
+package in.fssa.carecentral.servlets;
 
 import java.io.IOException;
 
@@ -12,13 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 import in.fssa.carecentral.dto.DoctorDTO;
 import in.fssa.carecentral.exception.ValidationException;
 import in.fssa.carecentral.service.DoctorService;
-import in.fssa.carecentral.service.UserService;
 
 /**
- * Servlet implementation class ViewDoctorForUsersServlet
+ * Servlet implementation class ViewDoctorForUserServlet
  */
 @WebServlet("/doctors/viewdoctor")
-public class ViewDoctorForUsersServlet extends HttpServlet {
+public class ViewDoctorForUserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -40,7 +39,6 @@ public class ViewDoctorForUsersServlet extends HttpServlet {
 		} catch (ValidationException e) {
 			e.printStackTrace();
 		}
-		
 	}
 
 }
