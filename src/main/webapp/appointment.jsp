@@ -11,6 +11,7 @@
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
+	<%System.out.println(request.getParameter("id")); %>
 	<main>
 	<%User user = (User)request.getAttribute("logged user"); %>
 		<form action = "create?id=<%=Integer.parseInt(request.getParameter("id")) %>" method = "POST">

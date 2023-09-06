@@ -41,14 +41,13 @@ public class CreateDoctorServlet extends HttpServlet {
 			doctorService.createDoctor(doctor);
 			String alert = "<script>alert('Doctor created successfully');</script>";
 			response.getWriter().println(alert);
+			response.sendRedirect(request.getContextPath()+"/doctors");
 		} catch (ValidationException e) {
 			String alert = "<script>alert('" + e.getMessage() +"');</script>";
 			response.getWriter().println(alert);
 			e.printStackTrace();
 		}
-		finally {
-			response.sendRedirect(request.getContextPath()+"/doctors");
-		}
+		
 		
 		
 	}

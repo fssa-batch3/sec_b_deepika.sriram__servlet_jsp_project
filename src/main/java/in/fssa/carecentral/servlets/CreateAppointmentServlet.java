@@ -27,6 +27,7 @@ public class CreateAppointmentServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		AppointmentService appointmentService = new AppointmentService();
 		String id = request.getParameter("id");
+		System.out.println(id);
 		if(id==null || "".equals(id)) {
 			throw new RuntimeException("id cannot be empty");
 		}
@@ -50,7 +51,7 @@ public class CreateAppointmentServlet extends HttpServlet {
 		try {
 			appointmentService.create(appointment);
 			response.getWriter().println("<script>alert('Appointment booked successfully!');</script>");
-			response.sendRedirect(request.getContextPath()+"/homepage");
+			response.sendRedirect(request.getContextPath()+"/myappointments");
 		} catch (ValidationException e) {
 			e.printStackTrace();
 			response.getWriter().print("<script>alert('"+e.getMessage()+"');</script>");

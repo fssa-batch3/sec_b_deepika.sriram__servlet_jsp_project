@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Update profile</title>
 <style>
 body{
 	font-family:"Arial";
