@@ -7,6 +7,7 @@
 <title>home page</title>
 <link rel="stylesheet" href="./style_files/header.css">
 <link rel = "stylesheet" href = "./style_files/index.css">
+<link rel = "stylesheet" href = "./style_files/footer.css">
 
 </head>
 <body>
@@ -64,5 +65,6 @@
 			</div>
 		</section>
 	</main>
+	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

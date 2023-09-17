@@ -20,23 +20,37 @@
 			<th>Name</th>
 			<th>Doctor name</th>
 			<th>Reason for consultation</th>
+			<th>Booked at</th>
 			<th>Date</th>
 			<th>Time</th>
+			<th>Method of consultation</th>
 			<th>Status of appointment</th>
+			<th>cancel</th>
 			
 		</tr>
 		<%Set<AppointmentDTO> appointmentList = (Set<AppointmentDTO>) request.getAttribute("appointments"); %>
 		<%for(AppointmentDTO appointment : appointmentList){ %>
 		<tr>
-			<td><%=appointment.getPatientName() %></td>
-			<td><%=appointment.getDoctorName() %></td>
-			<td><%=appointment.getReasonForConsultation() %></td>
+			<td data-appointment-id="<%=appointment.getId()%>"><%=appointment.getPatientName() %></td>
+			<td data-user-id = "<%=appointment.getUserId()%>"><%=appointment.getDoctorName() %></td>
+			<td data-doctor-id="<%=appointment.getDoctorId()%>"><%=appointment.getReasonForConsultation() %></td>
+			<td><%=appointment.getDateOfBooking()%></td>
 			<td><%=appointment.getDateOfConsultation() %></td>
 			<td>From <%=appointment.getStartTime() %> To <%=appointment.getEndTime() %></td>
-			<td><%=appointment.getStatus() %></td>
+			<td><%=appointment.getMethodOfConsultation().name() %></td>
+			<%if(appointment.getStatus().name().equals("Approved")){%>
+				<td bgcolor="#aefcb7" color="#08ad37"><%=appointment.getStatus().name()%></td>
+			<%}else if(appointment.getStatus().name().equals("Rejected")){%>
+				<td bgcolor="#fc8586" color="#d00404"><%=appointment.getStatus().name()%></td>
+			<%}else{%>
+				<td><%=appointment.getStatus()%></td>
+			<%}%>
+			<td><button class="cancel" type="button" >cancel appointment</button></td>
 		</tr>
-		<%} %>
+		<%}%>
 	</table>
 </main>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="<%=request.getContextPath()%>/javascript_files/cancelappointment.js"></script>
 </body>
 </html>

@@ -9,12 +9,13 @@
 	<section class="head">
 		<ul>
 			<li><a href="<%=request.getContextPath()%>/homepage">Home</a></li>
+			<li><a href = "<%=request.getContextPath()%>/about">About</a>
 			<li><a href="<%=request.getContextPath()%>/homepage/new">Sign up</a></li>
 		</ul>
 		<div class="dropdown" style="width: 10%">
 			<a href="javascript:void(0)" class="dropbtn">Login</a>
 			<div class="dropdown-content">
-				<a href="<%=request.getContextPath() %>homepage/doctorlogin">Doctor</a> <a href="<%=request.getContextPath()%>/homepage/login">Patient</a>
+				<a href="<%=request.getContextPath() %>/homepage/doctorlogin">Doctor</a> <a href="<%=request.getContextPath()%>/homepage/login">Patient</a>
 			</div>
 		</div>
 	</section>
@@ -23,6 +24,7 @@
 	<section class="head">
 		<ul>
 			<li><a href="<%=request.getContextPath()%>/homepage">Home</a></li>
+			<li><a href = "<%=request.getContextPath()%>/about">About</a>
 			<li><a href="<%=request.getContextPath()%>/doctors/list">Doctors
 					</a></li>
 		</ul>
@@ -31,7 +33,7 @@
 			<div class="dropdown-content">
 				<a href="<%=request.getContextPath() %>/users/user?id=<%=id%>">View profile</a>
 				<a href="<%=request.getContextPath()%>/myappointments">My appointments</a>
-				<a href="<%=request.getContextPath()%>/homepage/logout">Logout</a>
+				<a href="<%=request.getContextPath()%>/logout">Logout</a>
 			</div>
 		</div>
 	</section>

@@ -69,10 +69,13 @@ public class UserLoginServlet extends HttpServlet {
 			login.setAttribute("logged user id", user.getId());
 			System.out.println(user.getId());
 			
-			response.getWriter().println("User logged in successfully");
-			response.sendRedirect(request.getContextPath()+"/homepage");
+			response.getWriter().println("<script>alert('User logged in successfully!');");
+			response.getWriter().println("window.location.href=\""+request.getContextPath()+"/homepage\"");
+			response.getWriter().println("</script>");
 		}else {
-			throw new RuntimeException("Incorrect password");
+			response.getWriter().println("<script>alert('Incorrect password!');");
+			response.getWriter().println("window.location.href=\""+request.getContextPath()+"/homepage/login\"");
+			response.getWriter().println("</script>");
 		}
 	}
 
