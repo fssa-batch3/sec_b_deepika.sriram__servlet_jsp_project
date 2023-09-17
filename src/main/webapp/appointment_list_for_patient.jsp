@@ -42,9 +42,11 @@
 				<td bgcolor="#aefcb7" color="#08ad37"><%=appointment.getStatus().name()%></td>
 			<%}else if(appointment.getStatus().name().equals("Rejected")){%>
 				<td bgcolor="#fc8586" color="#d00404"><%=appointment.getStatus().name()%></td>
+			<%}else if(appointment.getStatus().name().equals("Cancelled")){%>
+				<td bgcolor = "#b2b2b2" color = "ffffff" id = "cancel"><%=appointment.getStatus()%></td>
 			<%}else{%>
-				<td><%=appointment.getStatus()%></td>
-			<%}%>
+				<td><%=appointment.getStatus().name() %></td>
+			<%} %>
 			<td><button class="cancel" type="button" >cancel appointment</button></td>
 		</tr>
 		<%}%>

@@ -11,10 +11,10 @@
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
-	<%System.out.println(request.getParameter("id")); %>
+	<%System.out.println("doctor id : "+request.getAttribute("doctor id")); %>
 	<main>
 	<%User user = (User)request.getAttribute("logged user"); %>
-		<form action = "create?id=<%=Integer.parseInt(request.getParameter("id")) %>" method = "POST">
+		<form action = "create" method = "POST">
                 <h2 class="hr-lines">Patient Information</h2>
                 <section class="appointment">
                     <div>
@@ -113,6 +113,7 @@
                 </section>
                 <br><br>
                 <section>
+                <input type ="hidden" name = "doctor_id" value = "<%=request.getParameter("id")%>">
                     <!-- <span>
                         <button type="button" id="back">Back</button>
                     </span> -->
