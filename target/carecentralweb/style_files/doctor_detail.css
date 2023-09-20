@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.doctor_detail{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border:1px solid rgb(203,202,202);
+    padding:1% 2%;
+}
+.doctor_detail img{
+    width:12%;
+    height: 12%;
+}
+.doctor_detail h2{
+    font-size:25px;
+    color:#1b3c74;
+}
+.doctor_detail div p{
+    width:500px;
+    color:#00a1cf;
+}
+.doctor_detail div button{
+    padding:10px 30px;
+    color:white;
+    background-color: #08ad37;
+    border:none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.doctor_detail div button:hover{
+    background-color: white;
+    color:#08ad37;
+    border:1px solid #08ad37;
+    transition: 0.3s;
+}

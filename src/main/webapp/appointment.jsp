@@ -102,18 +102,18 @@
                             <input type="time" id="address" style="width:325px" name = "start time"/>
                         </div>
                     </div>
-                    <div style="margin-left:3.5%;">
+                    <!-- <div style="margin-left:3.5%;">
                         <div>
                             <label for="">End time</label>
                         </div>
                         <div>
                             <input type="time" id="address" style="width:325px" name = "end time"/>
                         </div>
-                    </div>
+                    </div> -->
                 </section>
                 <br><br>
                 <section>
-                <input type ="hidden" name = "doctor_id" value = "<%=request.getParameter("id")%>">
+                <input type ="hidden" name = "doctor_id" value = "<%=request.getAttribute("doctor id")%>">
                     <!-- <span>
                         <button type="button" id="back">Back</button>
                     </span> -->

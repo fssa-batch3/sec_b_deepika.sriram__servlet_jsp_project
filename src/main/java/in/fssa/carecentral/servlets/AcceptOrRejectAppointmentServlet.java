@@ -42,9 +42,15 @@ public class AcceptOrRejectAppointmentServlet extends HttpServlet {
 		try {
 			String status = appointment.getStatus().name();
 			appointmentService.updateAppointmentStatusByAppointmentId(appointmentId, appointment);
-			response.getWriter().println("<script>alert('Appointment "+status+" successfully!')");
-			response.getWriter().println("window.location.href=\""+request.getContextPath()+"/home\"");
-			response.getWriter().println("</script>");
+			if(status.equals("Approved")) {
+				response.getWriter().println("<script>alert('Appointment "+status+" successfully!')");
+				response.getWriter().println("window.location.href=\""+request.getContextPath()+"/home\"");
+				response.getWriter().println("</script>");
+			}else {
+				response.getWriter().println("<script>alert('Appointment cancelled successfully!')");
+				response.getWriter().println("window.location.href=\""+request.getContextPath()+"/home\"");
+				response.getWriter().println("</script>");
+			}
 			
 		} catch (ValidationException e) {
 			e.printStackTrace();

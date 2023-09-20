@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Update profile</title>
 <style>
 body{
 	font-family:"Arial";
@@ -60,7 +60,7 @@ button {
 	%>
 	<main>
 		<form action="update?id=<%=user.getId()%>" method="POST">
-			<h2>Profile</h2>
+			<h2>Update Profile</h2>
 			<section>
 				<div>
 					<div>
@@ -68,7 +68,7 @@ button {
 					</div>
 					<div>
 						<input type="text" required=true name="first name"
-							value=<%=user.getFirstName()%>>
+							value="<%=user.getFirstName()%>">
 					</div>
 				</div>
 				<br>
@@ -78,7 +78,7 @@ button {
 					</div>
 					<div>
 						<input type="text" required=true name="last name"
-							value=<%=user.getLastName()%>>
+							value="<%=user.getLastName()%>">
 					</div>
 				</div>
 			</section>
@@ -90,7 +90,7 @@ button {
 					</div>
 					<div>
 						<input type="number" required=true name="age"
-							value=<%=user.getAge()%>>
+							value="<%=user.getAge()%>">
 					</div>
 				</div>
 				<br>
@@ -100,7 +100,7 @@ button {
 					</div>
 					<div>
 						<input type="text" required=true name="gender"
-							value=<%=user.getGender().name()%>>
+							value="<%=user.getGender().name()%>">
 					</div>
 				</div>
 			</section>
@@ -112,7 +112,7 @@ button {
 					</div>
 					<div>
 						<input type="tel" required=true name="mobile number"
-							value=<%=user.getMobileNumber()%>>
+							value="<%=user.getMobileNumber()%>">
 					</div>
 				</div>
 				<br>
@@ -122,7 +122,7 @@ button {
 					</div>
 					<div>
 						<input type="email" required=true name="email"
-							value=<%=user.getEmailId()%> disabled>
+							value="<%=user.getEmailId()%>" disabled>
 					</div>
 				</div>
 
@@ -135,13 +135,13 @@ button {
 					</div>
 					<div>
 						<input type="password" required=true name="password"
-							value=<%=user.getPassword()%>>
+							value="<%=user.getPassword()%>">
 					</div>
 				</div>
 			</section>
 			<br>
 			<div>
-				<a href = "<%=request.getContextPath() %>/users">
+				<a href = "<%=request.getContextPath() %>/homepage">
 					<button type="button">Back</button>
 				</a>
 				<br>

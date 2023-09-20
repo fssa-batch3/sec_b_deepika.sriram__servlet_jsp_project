@@ -1,6 +1,8 @@
 package in.fssa.carecentral.servlets;
 
 import java.io.IOException;
+import java.time.LocalTime;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -46,7 +48,10 @@ public class CreateAppointmentServlet extends HttpServlet {
 		}
 		appointment.setDateOfConsultation(request.getParameter("date of consultation"));
 		appointment.setStartTime(request.getParameter("start time")+":00");
-		appointment.setEndTime(request.getParameter("end time")+":00");
+		String startTime = appointment.getStartTime();
+		LocalTime localEndTime = LocalTime.parse(startTime).plusMinutes(15);
+		String endTime = AppointmentService.convertLocalTimeToString(localEndTime);
+		appointment.setEndTime(endTime);
 		
 		try {
 			appointmentService.create(appointment);
@@ -54,8 +59,9 @@ public class CreateAppointmentServlet extends HttpServlet {
 			response.sendRedirect(request.getContextPath()+"/myappointments");
 		} catch (ValidationException e) {
 			e.printStackTrace();
-			response.getWriter().print("<script>alert('"+e.getMessage()+"');</script>");
-			response.sendRedirect(request.getContextPath()+"/appointment/booknew");
+			response.getWriter().print("<script>alert('"+e.getMessage()+"');");
+			response.getWriter().println("window.location.href=\""+request.getContextPath()+"/appointment/booknew?id="+doctorId+"\"");
+			response.getWriter().println("</script>");
 		}
 	}
 

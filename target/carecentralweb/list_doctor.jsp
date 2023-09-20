@@ -60,7 +60,7 @@ td {
 	<div>
 		<a href='doctors/new'>
 			<button type="button">Add new doctor</button>
-		</a> <a href="<%=request.getContextPath()%>/homepage">
+		</a> <a href="<%=request.getContextPath()%>/admin">
 			<button type="button">Back to home page</button>
 		</a>
 	</div>

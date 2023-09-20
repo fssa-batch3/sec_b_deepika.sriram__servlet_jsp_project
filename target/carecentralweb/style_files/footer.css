@@ -1,0 +1,14 @@
+footer{
+    background-color: #1b3c74;
+    color:white;
+    padding:1% 5%;
+    margin-top:30px;
+    font-family: 'Inter',sans-serif;
+}
+footer h3{
+    font-size: 30px;
+}
+#Contact{
+    display: flex;
+    justify-content: space-between;
+}

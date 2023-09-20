@@ -1,0 +1,71 @@
+@charset "ISO-8859-1";
+body{
+	font-family:"Arial";
+}
+main{
+    margin:60px;
+    font-family:"Arial";
+}
+#sec1{
+    margin:10px 0;
+    padding:5% 0;
+    background-image: url("https://iili.io/J9BpLWx.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+    border-radius: 20px;
+    
+}
+#sec1 div{
+    margin-left:50%;
+    color:white;
+}
+#sec1 div button{
+    padding:2% 6%;
+    width:fit-content;
+    color:white;
+    font-weight: bold;
+    border: none;
+    background-color: #08ad37;
+    border-radius: 50px;
+    font-size: 20px;
+}
+#sec1 div button:hover{
+    background-color:white;
+    color:#08ad37;
+    transition: 0.4s;
+}
+#sec1 div input[type="text"]{
+    width:60%;
+    height:30px;
+    border-radius: 30px;
+    border: none;
+    padding:2px 2px 0px 15px;
+}
+#sec2{
+    margin:10px 0;
+   
+    display: flex;
+    justify-content: space-between;
+}
+#sec3{
+    background-image: linear-gradient(to bottom right,#00a1cf,#4abcf1,#ecf9ff);
+    display: flex;
+    margin:10px 0;
+   
+    border-radius: 20px;
+    color:white;
+}
+#sec3 img{
+    width:40%
+}#hospImage{
+    display:grid;
+    margin-left:150px;
+    grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
+    gap:0.5rem;
+    align-items: center;
+}
+#hospImage img{
+    opacity: 0.3;
+    filter:grayscale(100%)
+}
