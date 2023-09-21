@@ -15,7 +15,7 @@ $(document).ready(function(){
 			dateOfConsultation : row[0].querySelector("td:nth-child(5)").textContent,
 			timeOfConsultation : row[0].querySelector("td:nth-child(6)").textContent,
 			methodOfConsultation : row[0].querySelector("td:nth-child(7)").textContent,
-			status:"Cancelled"
+			status:"Cancelled_by_patient"
 			
 		};
 		console.log(appointmentData);

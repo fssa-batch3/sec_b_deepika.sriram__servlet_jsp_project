@@ -35,10 +35,8 @@ public class CancelAppointmentServlet extends HttpServlet {
 			
 			AppointmentService appointmentService = new AppointmentService();
 			try {
-				appointmentService.updateAppointmentStatusByAppointmentId(appId, appointment);
-//				response.getWriter().println("<script>alert('Appointment cancelled successfully!');");
-//				response.getWriter().println("window.location.href=\""+request.getContextPath()+"/myappointments\"");
-//				response.getWriter().println("</script>");
+//				appointmentService.updateAppointmentStatusByAppointmentId(appId, appointment);
+				appointmentService.changeAppointmentStatusByCancellingAnAppointment(appId, appointment);
 			} catch (ValidationException e) {
 				e.printStackTrace();
 				response.getWriter().println("<script>alert('"+e.getMessage()+"');");
