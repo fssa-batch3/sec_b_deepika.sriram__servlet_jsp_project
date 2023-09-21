@@ -33,6 +33,7 @@ public class ListAllDoctorServlet extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("/list_doctor.jsp");
 			rd.forward(request, response);
 		} catch (ValidationException e) {
+			response.getWriter().print(e.getMessage());
 			e.printStackTrace();
 			throw new RuntimeException("no doctors exists");
 		} 

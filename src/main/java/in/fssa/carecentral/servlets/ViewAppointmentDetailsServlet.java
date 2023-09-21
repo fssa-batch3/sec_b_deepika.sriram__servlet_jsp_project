@@ -40,6 +40,7 @@ public class ViewAppointmentDetailsServlet extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("/appointment_details.jsp");
 			rd.forward(request, response);
 		} catch (ValidationException e) {
+			response.getWriter().println(e.getMessage());
 			e.printStackTrace();
 			throw new RuntimeException(e.getMessage());
 		}

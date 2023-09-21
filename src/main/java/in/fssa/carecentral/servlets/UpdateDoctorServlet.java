@@ -28,6 +28,7 @@ public class UpdateDoctorServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id = request.getParameter("id");
 		if(id==null || id.isEmpty()) {
+			response.getWriter().println("id cannot be empty");
 			throw new RuntimeException("id cannot be empty");
 		}
 		

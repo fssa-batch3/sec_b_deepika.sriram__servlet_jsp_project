@@ -34,6 +34,7 @@ public class ViewDoctorListForUsersServlet extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("/doctor_list_cards.jsp");
 			rd.forward(request, response);
 		} catch (ValidationException e) {
+			response.getWriter().print(e.getMessage());
 			e.printStackTrace();
 		}
 	}

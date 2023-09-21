@@ -35,6 +35,7 @@ public class UpdateUserServlet extends HttpServlet {
 		
 		String userId =  request.getParameter("id");
 		if(userId==null) {
+			response.getWriter().print("id cannot be empty");
 			throw new RuntimeException("id cannot be empty");
 		}
 		try {

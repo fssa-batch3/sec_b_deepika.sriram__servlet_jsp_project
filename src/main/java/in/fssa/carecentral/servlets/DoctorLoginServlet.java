@@ -45,6 +45,7 @@ public class DoctorLoginServlet extends HttpServlet {
 		try {
 			doctor = doctorService.getDoctorByEmail(email);
 		}catch(ValidationException e) {
+			response.getWriter().println(e.getMessage());
 			throw new RuntimeException("no user exists");
 		}
 		

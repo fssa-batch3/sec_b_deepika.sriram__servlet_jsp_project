@@ -37,6 +37,7 @@ public class ViewDoctorForUserServlet extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("/view_doctor_details.jsp");
 			rd.forward(request, response);
 		} catch (ValidationException e) {
+			response.getWriter().println(e.getMessage());
 			e.printStackTrace();
 		}
 	}

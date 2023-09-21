@@ -24,6 +24,7 @@ public class DeleteUserServlet extends HttpServlet {
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
 		String userId = request.getParameter("id");
 		if(userId==null) {
+			response.getWriter().println("id cannot be empty");
 			throw new RuntimeException("id cannot be empty");
 		}
 		int id = Integer.parseInt(userId);

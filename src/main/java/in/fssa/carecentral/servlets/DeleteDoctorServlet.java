@@ -24,6 +24,7 @@ public class DeleteDoctorServlet extends HttpServlet {
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
 		String id = request.getParameter("id");
 		if(id==null || id.isEmpty()) {
+			response.getWriter().print("id cannot be empty");
 			throw new RuntimeException("id cannot be empty");
 		}
 		

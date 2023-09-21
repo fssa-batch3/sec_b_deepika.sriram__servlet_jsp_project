@@ -39,6 +39,7 @@ public class ViewAppointmentByUserIdServlet extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("/appointment_list_for_patient.jsp");
 			rd.forward(request, response);
 		} catch (ValidationException e) {
+			response.getWriter().println(e.getMessage());
 			e.printStackTrace();
 		}
 	}
