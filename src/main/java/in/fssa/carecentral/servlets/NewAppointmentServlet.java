@@ -26,6 +26,7 @@ public class NewAppointmentServlet extends HttpServlet {
 		String doctorId = request.getParameter("id");
 		System.out.println("doctor id in string"+doctorId);
 		if(doctorId==null || doctorId.isEmpty()) {
+			response.getWriter().println("<script>alert('id cannot be empty!');</script>");
 			throw new RuntimeException("doctor id cannot be empty");
 		}
 		if(user!=null) {
@@ -36,8 +37,10 @@ public class NewAppointmentServlet extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("/appointment.jsp");
 			rd.forward(request, response);
 		}else {
-			response.getWriter().println("<script>alert('you have not been logged in...plz log in into this website');</script>");
-			response.sendRedirect(request.getContextPath()+"/homepage/login");
+			response.getWriter().println("<script>alert('you have not been logged in...plz log in into this website');");
+			response.getWriter().println("window.location.href=\""+request.getContextPath()+"/homepage\"");
+			response.getWriter().println("</script>");
+			
 			throw new RuntimeException("you have not been logged in...plz log in into this website");
 		}
 		

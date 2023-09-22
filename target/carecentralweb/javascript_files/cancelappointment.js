@@ -2,11 +2,8 @@ $(document).ready(function(){
 	$(".cancel").click(function(){
 		const row = $(this).closest("tr");
 		const appointmentId = row.find("td[data-appointment-id]").data("appointment-id");
-		console.log(appointmentId);
 		const userId = row.find("td[data-user-id]").data("user-id");
-		console.log(userId);
 		const doctorId = row.find("td[data-doctor-id]").data("doctor-id");
-		console.log(doctorId);
 		const appointmentData = {
 			id:appointmentId,
 			patientId :userId,
@@ -15,10 +12,9 @@ $(document).ready(function(){
 			dateOfConsultation : row[0].querySelector("td:nth-child(5)").textContent,
 			timeOfConsultation : row[0].querySelector("td:nth-child(6)").textContent,
 			methodOfConsultation : row[0].querySelector("td:nth-child(7)").textContent,
-			status:"Cancelled"
+			status:"Cancelled_by_patient"
 			
 		};
-		console.log(appointmentData);
 		$.ajax({
 			type:"POST",
 			url:"http://localhost:8080/carecentralweb/cancel",

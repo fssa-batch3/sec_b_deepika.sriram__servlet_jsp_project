@@ -40,8 +40,9 @@ public class CreateUserServlet extends HttpServlet {
 		
 		try {
 			userService.createUser(user);
-			String alert = "<script>alert('User registered successfully');</script>";
-			response.sendRedirect(request.getContextPath()+"/homepage/login");
+			response.getWriter().print("<script>alert('User registered successfully !');");
+			response.getWriter().print("window.location.href=\""+request.getContextPath()+"/homepage/login\"");
+			response.getWriter().print("</script>");
 		}catch(ValidationException e) {
 			PrintWriter out = response.getWriter();
 			String jsCode = "<script>alert('" + e.getMessage() + "');</script>";

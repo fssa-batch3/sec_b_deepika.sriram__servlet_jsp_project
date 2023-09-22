@@ -28,6 +28,7 @@ public class ViewDoctorForUserServlet extends HttpServlet {
 		DoctorService doctorService = new DoctorService();
 		String id = request.getParameter("id");
 		if(id==null||"".equals(id)) {
+			response.getWriter().println("id cannot be empty");
 			throw new RuntimeException("id cannot be empty");
 		}
 		int doctorId = Integer.parseInt(id);

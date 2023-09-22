@@ -35,7 +35,7 @@ public class UpdateUserServlet extends HttpServlet {
 		
 		String userId =  request.getParameter("id");
 		if(userId==null) {
-			response.getWriter().print("id cannot be empty");
+			response.getWriter().print("<script>alert('id cannot be empty!');</script>");
 			throw new RuntimeException("id cannot be empty");
 		}
 		try {
@@ -44,7 +44,7 @@ public class UpdateUserServlet extends HttpServlet {
 			userService.updateUser(id, user);
 			response.sendRedirect(request.getContextPath()+"/homepage");
 		}catch(ValidationException e) {
-			response.getWriter().println(e.getMessage());
+			response.getWriter().println("<script>alert('"+e.getMessage()+"');</script>");
 			e.printStackTrace();
 		}
 	}

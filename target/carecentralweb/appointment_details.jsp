@@ -135,13 +135,13 @@ button {
 				<input type="hidden" name="doctor id" value="<%=appointment.getDoctorId()%>">
 			</div>
 			<%String status = appointment.getStatus().name();%>
-			<%if(status.equals("On_process")){%>
+			<%if(status.equals("Booked")){%>
 			<section class="button">
 				<div>
 					<button type="submit" name="Approved"  id = "accepted" value="Approved" onclick="setStatus(this.value)">Accept</button>
 				</div>
 				<div>
-					<button type="submit" name="Rejected" id = "rejected" value="Rejected" onclick="setStatus(this.value)">Reject</button>
+					<button type="submit" name="Rejected" id = "rejected" value="Cancelled_by_doctor" onclick="setStatus(this.value)">Cancel</button>
 				</div>
 			</section>
 			<%}%>

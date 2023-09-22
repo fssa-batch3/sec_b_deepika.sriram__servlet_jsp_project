@@ -28,6 +28,7 @@ public class EditDoctorServlet extends HttpServlet {
 		
 		String id = request.getParameter("id");
 		if(id==null || id.isEmpty()) {
+			response.getWriter().print("<script>alert('id cannot be negative!');</script>");
 			throw new RuntimeException("id cannot be negative");
 		}
 		
