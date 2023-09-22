@@ -42,7 +42,9 @@ public class UpdateUserServlet extends HttpServlet {
 			
 			int id = Integer.parseInt(userId);
 			userService.updateUser(id, user);
-			response.sendRedirect(request.getContextPath()+"/homepage");
+			response.getWriter().print("<script>alert('User updated successfully!');");
+			response.getWriter().print("window.location.href=\""+request.getContextPath()+"/homepage\"");
+			response.getWriter().print("</script>");
 		}catch(ValidationException e) {
 			response.getWriter().println("<script>alert('"+e.getMessage()+"');</script>");
 			e.printStackTrace();
