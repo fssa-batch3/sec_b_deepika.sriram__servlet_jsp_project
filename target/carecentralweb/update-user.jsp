@@ -128,7 +128,7 @@ button {
 
 			</section>
 			<br>
-			<section>
+			<%-- <section>
 				<div>
 					<div>
 						<label for="">Create password</label>
@@ -138,7 +138,7 @@ button {
 							value="<%=user.getPassword()%>">
 					</div>
 				</div>
-			</section>
+			</section> --%>
 			<br>
 			<div>
 				<a href = "<%=request.getContextPath() %>/homepage">

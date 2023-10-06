@@ -41,7 +41,7 @@
 						<label>Age</label>
 					</div>
 					<div>
-						<input type="number" name="age" style="width: 120px" required />
+						<input type="number" name="age" style="width: 120px" min = 17 max = 100 required />
 					</div>
 				</div>
 				<div style="margin-left: 20px;">
@@ -84,7 +84,7 @@
 					<div class="password_container">
 						<input type="password" required="true" id="pass_1"
 							pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-							style="width: 290px" name="password" /> <a id="toggle-password-1">
+							style="width: 290px" name="password" title = "pattern must contain atleast one uppercase , one lowercase , one numerals and a special symbols"/> <a id="toggle-password-1">
 							<span class="eye_icon-1 hide" id="open_eye-1"> <i
 								class="fa fa-eye" style="color: #08ad37; font-size: 20px"></i>
 						</span> <span class="eye_icon-1" id="close_eye-1"> <i
