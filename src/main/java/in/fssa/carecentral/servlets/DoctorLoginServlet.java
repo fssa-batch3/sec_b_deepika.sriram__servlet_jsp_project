@@ -53,13 +53,9 @@ public class DoctorLoginServlet extends HttpServlet {
 		if(password.equals(doctor.getPassword())) {
 			doctorLogin.setAttribute("logged email", email);
 //			application.setAttribute("logged email" , email);
-			System.out.println(email);
 			doctorLogin.setAttribute("logged doctor", doctor);
-			System.out.println(doctor);
 			doctorLogin.setAttribute("logged doctor's user id", doctor.getUserId());
-			System.out.println(doctor.getUserId());
 			doctorLogin.setAttribute("logged doctor's doctor id", doctor.getId());
-			System.out.println(doctor.getId());
 			
 			
 			response.getWriter().println("<script>alert('Doctor logged in successfully!');");

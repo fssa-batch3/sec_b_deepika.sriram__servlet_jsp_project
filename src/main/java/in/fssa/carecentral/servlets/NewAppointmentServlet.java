@@ -24,14 +24,12 @@ public class NewAppointmentServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		User user = (User)request.getSession().getAttribute("logged user");
 		String doctorId = request.getParameter("id");
-		System.out.println("doctor id in string"+doctorId);
 		if(doctorId==null || doctorId.isEmpty()) {
 			response.getWriter().println("<script>alert('id cannot be empty!');</script>");
 			throw new RuntimeException("doctor id cannot be empty");
 		}
 		if(user!=null) {
 			int doctor_id = Integer.parseInt(doctorId);
-			System.out.println("doctor id in integer"+doctor_id);
 			request.setAttribute("doctor id", doctor_id);
 			request.setAttribute("logged user", user);
 			RequestDispatcher rd = request.getRequestDispatcher("/appointment.jsp");

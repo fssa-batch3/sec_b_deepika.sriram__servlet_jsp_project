@@ -4,11 +4,11 @@ body{
 	font-family:"Arial";
 }
 form.sgn{
-    padding:2% 5%;
-    width:45%;
+    padding:2%;
+    width:43%;
     position:relative;
     margin-top:2%;
-    left:22%;
+    left:30%;
     box-shadow: 0px 0px 5px rgb(203, 202, 202);
 }
 form  h2{
@@ -19,6 +19,7 @@ form img{
 }
 section{
     display:flex;
+    margin-left:15px;
 }
 section label{
     color:#1b3c74;
@@ -37,16 +38,30 @@ select{
 }
 #register{
     padding:10px 20px;
-    width:100%;
+    width:600px;
     color: white;
     font-weight: bold;
     font-size: 20px;
     background-color: #08ad37;
     border: none;
+    margin-left:15px;
 }
 #register:hover{
     background-color:white;
     color:#08ad37;
     border: 1px solid #08ad37;
     transition: 0.3s;
+}
+
+.password_container{
+	position:relative;
+}
+
+.eye_icon-1 , .eye_icon-2 {
+	position : absolute;
+	top : 5px;
+	right : 5px;
+}
+.hide{
+	visibility:hidden;
 }

@@ -29,14 +29,12 @@ public class CreateAppointmentServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		AppointmentService appointmentService = new AppointmentService();
 		String id = request.getParameter("doctor_id");
-		System.out.println("doctor id from servlet"+id);
 		if(id==null || "".equals(id)) {
 			throw new RuntimeException("id cannot be empty");
 		}
 		int doctorId = Integer.parseInt(id);
 		User user = (User)request.getSession().getAttribute("logged user");
 		int userId = user.getId();
-		System.out.print(userId);
 		
 		Appointment appointment = new Appointment();
 		appointment.setDoctorId(doctorId);

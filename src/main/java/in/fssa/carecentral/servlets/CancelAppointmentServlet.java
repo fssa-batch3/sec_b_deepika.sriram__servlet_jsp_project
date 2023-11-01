@@ -31,7 +31,6 @@ public class CancelAppointmentServlet extends HttpServlet {
 			Gson gson = new Gson();
 			
 			Appointment appointment = gson.fromJson(appointmentdata, Appointment.class);
-			System.out.print(appointment);
 			
 			AppointmentService appointmentService = new AppointmentService();
 			try {

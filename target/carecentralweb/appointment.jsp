@@ -7,11 +7,11 @@
 <meta charset="ISO-8859-1">
 <title>Appointment form</title>
 <link rel = "stylesheet" href = "../style_files/header.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
 <link rel = "stylesheet" href = "../style_files/appointment.css">
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
-	<%System.out.println("doctor id : "+request.getAttribute("doctor id")); %>
 	<main>
 	<%User user = (User)request.getAttribute("logged user"); %>
 		<form action = "create" method = "POST">
@@ -123,5 +123,6 @@
                 </section>
             </form>
 	</main>
+	<script type="text/javascript" src = "<%=request.getContextPath()%>/javascript_files/past_date_disabler.js"></script>
 </body>
 </html>

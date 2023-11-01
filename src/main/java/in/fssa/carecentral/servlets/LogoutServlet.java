@@ -22,7 +22,6 @@ public class LogoutServlet extends HttpServlet {
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		HttpSession session = request.getSession();
-		System.out.println("Logout Servlet");
 		
 		session.invalidate();
 		java.io.PrintWriter out = response.getWriter();

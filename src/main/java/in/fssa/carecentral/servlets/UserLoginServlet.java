@@ -47,11 +47,8 @@ public class UserLoginServlet extends HttpServlet {
 		HttpSession login = request.getSession();
 		if(password.equals(user.getPassword())) {
 			login.setAttribute("logged email", email);
-			System.out.println(email);
 			login.setAttribute("logged user", user);
-			System.out.println(user);
 			login.setAttribute("logged user id", user.getId());
-			System.out.println(user.getId());
 			
 			response.getWriter().println("<script>alert('User logged in successfully!');");
 			response.getWriter().println("window.location.href=\""+request.getContextPath()+"/homepage\"");

@@ -38,3 +38,15 @@ form div button:hover{
     color:#08ad37;
     transition: 0.3s;
 }
+.password_container{
+	position:relative;
+}
+
+.eye_icon{
+	position : absolute;
+	top : 5px;
+	right : 5px;
+}
+.hide{
+	visibility:hidden;
+}

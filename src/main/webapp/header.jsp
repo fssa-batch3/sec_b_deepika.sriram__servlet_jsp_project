@@ -3,7 +3,6 @@
 	<img id="logo" src="https://iili.io/HgM93tj.png" alt="logo of carecentral">
 	<%String loggedUserEmail = (String) request.getSession().getAttribute("email");%>
 	<%User loggedUser = (User) request.getSession().getAttribute("logged user");  %>
-	<%System.out.println(loggedUser); %>
 	
 	<%if(loggedUser==null){ %>
 	<section class="head">
