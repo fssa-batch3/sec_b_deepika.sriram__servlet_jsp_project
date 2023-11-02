@@ -43,69 +43,69 @@ h2{
 		<div>
 			<label for="first name">First name</label> <br> 
 			<input
-				type="text" required=true name="first name" value = "Thenmozhi"> <br>
+				type="text" required=true name="first name"> <br>
 		</div>
 		<br>
 	<div></div>
 		<div>
 			<label for="last name">Last name</label> <br> <input type="text"
-				required=true name="last name" value = "Srinivas"> <br>
+				required=true name="last name"> <br>
 		</div>
 		<br>
 	<div></div>
 		<div>
 			<label for="age">Age</label> <br>
-			<input type="number" required=true name="age" value="43"> <br>
+			<input type="number" required=true name="age"> <br>
 		</div>
 	<div></div>
 	<br>
 		<div>
 			<label for="gender"> Gender</label> <br>
 			<input type="checkbox" name="gender" value="M"> male <input
-				type="checkbox" name="gender" value="F" checked>female <input
+				type="checkbox" name="gender" value="F">female <input
 				type="checkbox" name="gender" value="O">others <br>
 		</div>
 	<div></div>
 	<br>
 		<div>
 			<label for="mobile number"> Mobile number</label> <br>
-			<input type="tel" required=true name="mobile number" value="6638637086"> <br>
+			<input type="tel" required=true name="mobile number"> <br>
 		</div>
 	<div></div>
 	<br>
 		<div>
 			<label for="email"> Email</label> <br>
-			<input type="email" required=true name="email" value="thenmozhi080@gmail.com"> <br>
+			<input type="email" required=true name="email"> <br>
 		</div>
 	<div></div>
 	<br>
 		<div>
 			<label for="password"> Password</label> <br>
-			<input type="password" required=true name="password" value="Then@1234"> <br>
+			<input type="password" required=true name="password"> <br>
 		</div>
 	<div></div>
 	<br>
 		<div>
 			<label for="qualifications">Qualifications</label> <br>
-			<input type="text" required="true" name="qualifications" value="MBBS, DGO"> <br>
+			<input type="text" required="true" name="qualifications"> <br>
 		</div>
 	<div></div>
 	<br>
 		<div>
 			<label for="experience">Experience</label> <br>
-			<input type="number" required="true" name="experience" value="17"> <br>
+			<input type="number" required="true" name="experience"> <br>
 		</div>
 	<div></div>
 	<br>
 		<div>
 			<label for="department">Department</label> <br>
-			<input type="text" required=true name="department" value="Obstetrics and Gynecology"> <br>
+			<input type="text" required=true name="department"> <br>
 		</div>
 	<div></div>
 	<br>
 		<div>
 			<label for="doctor image">Doctor image</label> <br>
-			<input type="url" required=true name="doctor image" value="https://iili.io/HU0M1Hv.jpg"> <br>
+			<input type="url" required=true name="doctor image"> <br>
 		</div>
 	<div></div>
 	<br>

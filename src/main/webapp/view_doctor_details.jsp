@@ -10,6 +10,7 @@
 <link rel = "stylesheet" href = "../style_files/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel = "stylesheet" href = "../style_files/doctor_detail.css">
+<link rel="stylesheet" href="../style_files/footer.css">
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
@@ -51,6 +52,7 @@
 			</div>
 		</section>
 	</main>
+	<jsp:include page="footer.jsp"></jsp:include>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
         integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>

@@ -13,7 +13,8 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 <main>
-
+<%Set<AppointmentDTO> appointmentList = (Set<AppointmentDTO>) request.getAttribute("appointments"); %>
+<%if(appointmentList.isEmpty()==false) {%>
 <h2>My appointments</h2>
 	<table>
 		<tr>
@@ -28,7 +29,6 @@
 			<th>cancel</th>
 			
 		</tr>
-		<%Set<AppointmentDTO> appointmentList = (Set<AppointmentDTO>) request.getAttribute("appointments"); %>
 		<%for(AppointmentDTO appointment : appointmentList){ %>
 		<tr>
 			<td data-appointment-id="<%=appointment.getId()%>"><%=appointment.getPatientName() %></td>
@@ -51,6 +51,10 @@
 		</tr>
 		<%}%>
 	</table>
+<%}else{ %>
+	<img alt="searching of appointments" src="https://iili.io/JqHFnxS.jpg" style = "width : 25% ;position:relative ;left:38%">
+	<h1 style="color : #08ad37; text-align:center">No appointments booked yet !! </h1>
+<%} %>
 </main>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="<%=request.getContextPath()%>/javascript_files/cancelappointment.js"></script>
